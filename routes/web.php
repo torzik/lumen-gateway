@@ -18,7 +18,7 @@ $router->get('/', function () use ($router) {
 });
 
 
-$router->group(['prefix' => 'api'], function () use ($router) {
+$router->group(['prefix' => 'api', 'middleware' => App\Http\Middleware\ApiAuthentication::class], function () use ($router) {
     $router->post('get-deposit-form', ['uses' => 'TransactionController@getDepositForm']);
 
 });
