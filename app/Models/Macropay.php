@@ -8,7 +8,6 @@ class Macropay extends Model implements Psp {
 
 
     public function getDepositForm() {
-        // TODO: Implement getDepositForm() method.
 
        $form = '<!DOCTYPE html>';
        $form .= '<html>';
@@ -25,5 +24,9 @@ class Macropay extends Model implements Psp {
 </body>
 </html>';
        return $form;
+    }
+
+    public function deposit() {
+        // TODO: Implement deposit() method.
     }
 }
